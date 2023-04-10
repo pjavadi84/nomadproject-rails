@@ -40,8 +40,11 @@ const Gallery = () => {
           <div className='image-properties-details'>
             <p>Name: {selectedImage.author}</p>
             <ul>
-                <li>Width: {selectedImage.width}</li>
-                <li>height: {selectedImage.height}</li>
+                <p> W: {selectedImage.width} x H:{selectedImage.height} </p>
+               
+                <p>{selectedImage.url}</p>
+        
+                <p>Download: {selectedImage.download_url}</p>
             </ul>
           </div>
         </div>

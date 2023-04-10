@@ -18,6 +18,7 @@ gem 'faraday_middleware'
 gem 'haml'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'cors'
+gem 'webpacker'
 
 
 group :development, :test do

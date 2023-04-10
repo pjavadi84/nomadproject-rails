@@ -7,9 +7,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'index' %>
+    <%= stylesheet_pack_tag 'index' %>
+    <script>
+      ReactDOM.render(
+        React.createElement(Gallery),
+        document.getElementById('root')
+      );
+    </script>
   </head>
 
   <body>
+    <div id="root"></div>
+    
     <%= yield %>
   </body>
 </html>
