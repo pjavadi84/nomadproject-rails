@@ -23,3 +23,4 @@ The following tools and libraries are preinstalled for you:
 
 - Implement a search box at the top of the Gallery
 - As a user types, the list of images in the Gallery should filter based on the matching author name
+# nomadproject-rails
