@@ -17,6 +17,8 @@ gem 'faraday'
 gem 'faraday_middleware'
 gem 'haml'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'cors'
+
 
 group :development, :test do
   gem 'pry-byebug'
