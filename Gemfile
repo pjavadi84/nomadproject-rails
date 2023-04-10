@@ -16,6 +16,7 @@ gem 'sass-rails', '>= 6'
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'haml'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'pry-byebug'
