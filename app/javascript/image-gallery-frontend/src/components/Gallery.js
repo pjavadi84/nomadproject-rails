@@ -7,6 +7,10 @@ import Image from '../components/Image';
 const Gallery = () => {
   const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Filter images based on search query
+  const filteredImages = images.filter(image => image.author.toLowerCase().includes(searchQuery.toLowerCase()));
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,13 +29,22 @@ const Gallery = () => {
 
   return (
     <div className='gallery-images'>
-      {images.map((image) => (
+      <div>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search by author..."
+        />
+      </div>
+
+      {filteredImages.map((image) => (
         <Image 
-            width={300} 
-            key={image.id} 
-            src={image.download_url} 
-            alt={image.author} 
-            onClick={() => handleImageClick(image)} />
+          width={300} 
+          key={image.id} 
+          src={image.download_url} 
+          alt={image.author} 
+          onClick={() => handleImageClick(image)} />
       ))}
 
         {selectedImage && (
