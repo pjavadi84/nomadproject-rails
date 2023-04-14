@@ -19,6 +19,7 @@ gem 'haml'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'cors'
 gem 'webpacker'
+gem 'openai'
 
 
 group :development, :test do
