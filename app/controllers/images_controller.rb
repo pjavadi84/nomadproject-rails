@@ -1,10 +1,15 @@
 class ImagesController < ApplicationController
-    validates :description, presence: true
+    # validates :description, presence: true
     
     def index
+        @images = Image.all # Fetch all images
+        render json: @images
     end
 
     def show
+        @image = Image.find(params[:id]) # Find the image by ID
+        @gallery = @image.gallery # Fetch the associated gallery for the image
+        render json: @image
     end
 
     def new
