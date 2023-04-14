@@ -1,0 +1,7 @@
+<%= form_for @image, url: image_path do |f| %>
+  <!-- Form fields go here -->
+  <%= f.label : %>
+  <%= f.text_field :description %>
+
+  <%= f.submit "Submit" %>
+<% end %>
